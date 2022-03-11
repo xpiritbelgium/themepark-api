@@ -1,10 +1,8 @@
-﻿using Themepark.Domain.Entity;
-
-namespace Themepark.API.Types
+﻿namespace Themepark.Domain.Entity
 {
-    public class RollercoasterType : ObjectType<Rollercoaster>
+    public class Rollercoaster
     {
-
+        public Guid Id { get; init; }
         public string Name { get; set; }
         public string Type { get; set; }
         public string ImageUrl { get; set; }

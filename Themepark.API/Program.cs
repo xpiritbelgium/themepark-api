@@ -1,10 +1,11 @@
 using Themepark.API;
 
 var builder = WebApplication.CreateBuilder(args);
+ConfigurationManager configuration = builder.Configuration;
 
 
 builder.Services.AddGraphQLConfiguration();
-
+builder.Services.AddMongoConfig(configuration);
 
 
 

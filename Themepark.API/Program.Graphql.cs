@@ -13,6 +13,8 @@
                 .AddGraphQLServer()
                 .AddQueryType()
                 .AddMutationType()
+                .AddFiltering()
+                .AddSorting()
                 .AddTypes(queriesAndMutations)
                 .AddApolloTracing()
                 .AddType(() => new UuidType("Uuid"));

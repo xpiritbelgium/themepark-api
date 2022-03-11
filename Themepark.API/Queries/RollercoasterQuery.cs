@@ -8,18 +8,11 @@ namespace Themepark.API.Queries
     public class RollercoasterQuery
     {
         [GraphQLType(typeof(ListType<RollercoasterType>))]
+        [UseFiltering(typeof(RollercoasterFilterType))]
+        [UseSorting(typeof(RollercoasterSortType))]
         public Task<IEnumerable<Rollercoaster>> GetRollerCoasters([Service] IRollercoasterRepository rollercoasterRepository)
         {
             return rollercoasterRepository.GetRollercoastersAsync(CancellationToken.None);
-
-            //var coasters = new List<RollercoasterType>()
-            //{
-            //    new RollercoasterType("FLY","Flying Coaster","FLY.jpg"),
-            //    new RollercoasterType("Nemesis","Flying Coaster","FLY.jpg"),
-            //    new RollercoasterType("Furry","Launch coaster","FLY.jpg"),
-            //};
-
-            //return coasters;
         }
     }
 }

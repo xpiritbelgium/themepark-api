@@ -12,7 +12,7 @@
             services
                 .AddGraphQLServer()
                 .AddQueryType()
-                //.AddMutationType()
+                .AddMutationType()
                 .AddTypes(queriesAndMutations)
                 .AddApolloTracing()
                 .AddType(() => new UuidType("Uuid"));
